@@ -29,9 +29,10 @@ function App() {
         <Route path="/write">
           {currentUser ? <write /> : <Login />}</Route>
           <Route path="/settings">
-            {currentUser ? <Settings />} : <Login />}
+            {currentUser ? <Settings /> : <Login />}
         </Route>
         </Switch>
+      </Router>
   );
 }
 export default App;
