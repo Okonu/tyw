@@ -19,6 +19,19 @@ function App() {
         <Route path="/posts">
           <Homepage/>
         </Route>
+        <Route path="/register">
+        {currentUser ? <Homepage/> : <Register />}
+        </Route>
+        <Route path="/login">{currentUser ? <Homepage /> : <Login />}</Route>
+        <Route path="/post/:id">
+          <Single/>
+        </Route>
+        <Route path="/write">
+          {currentUser ? <write /> : <Login />}</Route>
+          <Route path="/settings">
+            {currentUser ? <Settings />} : <Login />}
+        </Route>
+        </Switch>
   );
 }
 export default App;
