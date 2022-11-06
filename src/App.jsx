@@ -7,5 +7,18 @@ import Single from "./pages/single/Single";
 import Write from "./pages/write/Write";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-function App() {}
+function App() {
+  const currentUser = true;
+  return (
+    <Router>
+      <Topbar />
+      <Switch>
+        <Route exact path="/">
+          <Homepage />
+        </Route>
+        <Route path="/posts">
+          <Homepage/>
+        </Route>
+  );
+}
 export default App;
